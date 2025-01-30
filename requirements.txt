@@ -1,0 +1,8 @@
+torch
+gradio
+faiss-cpu
+pymupdf
+numpy
+transformers
+sentence-transformers
+pickle5
