@@ -1,6 +1,4 @@
-### **Understanding the Models Used in Your Code**  
-
-Your code uses two pre-trained models:  
+code uses two pre-trained models:  
 
 1. **Sentence Transformer (`all-MiniLM-L6-v2`)** – for text embeddings  
 2. **FLAN-T5 (`google/flan-t5-large`)** – for text generation  
@@ -61,4 +59,3 @@ This model generates text based on a given prompt, making it useful for **Q&A, s
 1. **Find relevant information** → (Sentence Transformer)  
 2. **Generate a meaningful response** → (FLAN-T5)  
 
-Would you like an example of how these models work together? 😊
