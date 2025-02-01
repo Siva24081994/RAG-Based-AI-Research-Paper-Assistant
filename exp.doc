@@ -1,0 +1,64 @@
+### **Understanding the Models Used in Your Code**  
+
+Your code uses two pre-trained models:  
+
+1. **Sentence Transformer (`all-MiniLM-L6-v2`)** – for text embeddings  
+2. **FLAN-T5 (`google/flan-t5-large`)** – for text generation  
+
+---
+
+## **1️⃣ Sentence Transformer: `all-MiniLM-L6-v2`**  
+```python
+embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
+```
+✅ **Purpose:**  
+This model converts text into vector embeddings, which help in tasks like similarity search, clustering, and retrieval-based NLP.
+
+✅ **Model Type:**  
+- Based on **MiniLM (Microsoft's Lightweight Transformer)**
+- Uses a **6-layer encoder** (L6) and a **384-dimensional output vector**  
+
+✅ **Training Data:**  
+- Trained on **1 billion sentence pairs** from various sources like **Wikipedia, news, scientific articles, and web data**  
+- Fine-tuned using **contrastive learning**, meaning it learns to bring similar sentences closer in the embedding space.
+
+✅ **Use Case:**  
+- Semantic search  
+- Clustering & topic modeling  
+- Information retrieval (like finding relevant text chunks in PDFs)  
+
+---
+
+## **2️⃣ FLAN-T5: `google/flan-t5-large`**  
+```python
+qa_model = pipeline("text2text-generation", model="google/flan-t5-large")
+```
+✅ **Purpose:**  
+This model generates text based on a given prompt, making it useful for **Q&A, summarization, translation, and reasoning tasks**.
+
+✅ **Model Type:**  
+- Built on **T5 (Text-to-Text Transfer Transformer)**  
+- FLAN (Fine-tuned LAnguage Net) is Google's improvement over the original T5, making it better at **following instructions**  
+
+✅ **Training Data:**  
+- Trained on **multiple diverse datasets**, including:  
+  - **Natural language inference datasets** (for reasoning)  
+  - **Summarization datasets** (like CNN/DailyMail)  
+  - **QA datasets** (like SQuAD)  
+  - **Web-text, Wikipedia, books, and dialogue datasets**  
+
+✅ **How It Works:**  
+- Takes input as `"Context: <retrieved text> \n Question: <your query> \n Answer:"`  
+- Generates a coherent response based on context  
+
+---
+
+### **Why These Models?**
+- **SentenceTransformer:** Helps retrieve relevant text from a document (like a research paper).  
+- **FLAN-T5:** Uses retrieved text to generate an answer in natural language.  
+
+🚀 **In Simple Terms:**  
+1. **Find relevant information** → (Sentence Transformer)  
+2. **Generate a meaningful response** → (FLAN-T5)  
+
+Would you like an example of how these models work together? 😊
