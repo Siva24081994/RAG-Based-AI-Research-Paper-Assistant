@@ -41,6 +41,10 @@ This project is a **Retrieval-Augmented Generation (RAG) application** that allo
 
 ![image](https://github.com/user-attachments/assets/ca41a60b-8b87-4a5a-aa78-592b0fb16f98)
 
+The biggest advantage of RAG (Retrieval-Augmented Generation) is that it reduces hallucination by retrieving real-world, factual data from external sources before generating an answer. This makes it more reliable compared to purely generative models like GPT or FLAN-T5, which can sometimes produce hypothetical or incorrect responses.
+
+
+
 1. **Extract Text**: Extracts text from uploaded PDFs.
 2. **Preprocess Data**: Cleans and chunks text for better retrieval.
 3. **Embedding Creation**: Converts text into vector embeddings and stores them in FAISS.
