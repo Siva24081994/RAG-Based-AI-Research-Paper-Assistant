@@ -38,8 +38,7 @@ This project is a **Retrieval-Augmented Generation (RAG) application** that allo
 ```
 
 ## Project Workflow
-
-![image](https://github.com/user-attachments/assets/ca41a60b-8b87-4a5a-aa78-592b0fb16f98)
+<img width="1382" alt="Screenshot 2025-02-27 at 2 09 44 AM" src="https://github.com/user-attachments/assets/73bf18a1-7931-457a-b1e1-c6a9df6a5306" />
 
 The biggest advantage of RAG (Retrieval-Augmented Generation) is that it reduces hallucination by retrieving real-world, factual data from external sources before generating an answer. This makes it more reliable compared to purely generative models like GPT or FLAN-T5, which can sometimes produce hypothetical or incorrect responses.
 
