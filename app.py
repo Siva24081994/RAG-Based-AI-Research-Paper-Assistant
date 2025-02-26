@@ -37,7 +37,7 @@ def clean_text(text):
     text = re.sub(r'[^a-zA-Z0-9.,;?!\s]', '', text)  # Remove special characters
     return text.strip()  # Remove leading and trailing spaces
 
-def chunk_text(text, chunk_size=1000):
+def chunk_text(text, chunk_size=200):
     """Splits text into smaller chunks of a fixed size."""
     words = text.split()  # Split text into words
     return [" ".join(words[i:i+chunk_size]) for i in range(0, len(words), chunk_size)]
