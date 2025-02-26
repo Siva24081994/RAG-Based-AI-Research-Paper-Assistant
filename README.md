@@ -41,17 +41,6 @@ This project is a **Retrieval-Augmented Generation (RAG) application** that allo
 
 ![image](https://github.com/user-attachments/assets/ca41a60b-8b87-4a5a-aa78-592b0fb16f98)
 
- Final Summary (Connecting Each Step)
-Diagram Step	Your Code Step	Explanation
-📄 Input Documents	extract_text_from_pdf()	Load and extract text from PDF.
-📜 Text Chunks	chunk_text()	Split extracted text into smaller parts.
-🧠 Encoder Model (Embedding)	embedding_model.encode(chunks)	Convert text into vector representations.
-📦 Vector Database	faiss_index.add(vectors), metadata_store.extend(chunks)	Store embeddings for fast search.
-❓ User Question	embedding_model.encode([query])	Convert question into an embedding.
-🔍 Similarity Search	retrieve_relevant_chunks(query, top_k=5)	Retrieve the most relevant chunks from FAISS.
-🤖 Generator LLM Model	generate_answer(query, retrieved_chunks)	Use retrieved context to generate an answer.
-✅ Final Answer	gradio_interface()	Display the final response to the user.
-
 1. **Extract Text**: Extracts text from uploaded PDFs.
 2. **Preprocess Data**: Cleans and chunks text for better retrieval.
 3. **Embedding Creation**: Converts text into vector embeddings and stores them in FAISS.
