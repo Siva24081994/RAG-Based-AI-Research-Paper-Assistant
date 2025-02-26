@@ -84,3 +84,20 @@ iface = gr.Interface(fn=gradio_interface, inputs=["file", "text"], outputs="text
 
 # Launch the Gradio web app
 iface.launch()
+
+"""So, how does it work?
+Extract text from PDF → Store chunks in metadata_store.
+Convert text into embeddings → Store in faiss_index.
+When a query is made, FAISS finds the most relevant embeddings.
+Using indices from FAISS, we retrieve the original text chunks from metadata_store.
+📌 Example:
+
+PDF text:
+"Machine learning is a field of AI that allows computers to learn from data."
+FAISS stores:
+[0.21, -0.34, 0.56, ..., -0.12] (Vector representation)
+metadata_store keeps:
+"Machine learning is a field of AI that allows computers to learn from data."
+Query: "What is machine learning?"
+FAISS finds the closest vector → Retrieves original text → Passes it to Flan-T5 for answering."""
+
