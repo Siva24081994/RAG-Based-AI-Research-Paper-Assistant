@@ -38,6 +38,9 @@ This project is a **Retrieval-Augmented Generation (RAG) application** that allo
 ```
 
 ## Project Workflow
+
+![image](https://github.com/user-attachments/assets/ca41a60b-8b87-4a5a-aa78-592b0fb16f98)
+
 1. **Extract Text**: Extracts text from uploaded PDFs.
 2. **Preprocess Data**: Cleans and chunks text for better retrieval.
 3. **Embedding Creation**: Converts text into vector embeddings and stores them in FAISS.
